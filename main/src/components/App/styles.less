@@ -1,0 +1,49 @@
+@import '../../../style/style-variables.less';
+
+/* ===========================================
+          Applied Rules
+=========================================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", "Spectral", "Helvetica Neue", sans-serif;
+  font-size:62.5%;
+  background-color: @white;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin: .8rem;
+  font-family: 'Jura', sans-serif;
+}
+
+/* ===========================================
+          Site Wide Element Styles
+=========================================== */
+.c-app__container {
+  height: 0;
+}
+
+.c-app__lowered-container {
+  height: 8rem;
+}
+
+/* ===========================================
+          Media Queries
+=========================================== */
+
+@media (min-width: 769px) {
+  .c-app {
+    &__content-container {
+      min-height: calc(100vh - 154px);
+    }
+  }
+}

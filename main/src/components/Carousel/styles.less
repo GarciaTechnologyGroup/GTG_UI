@@ -1,0 +1,134 @@
+@import '../../../style/style-variables';
+
+.c-carousel {
+  &__container {
+    display: flex;
+    position: relative;
+    width: 50rem;
+  }
+
+  &__viewport {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    flex-grow:  1;
+    z-index: 1;
+    position:  relative;
+
+    /* removes scrollbar */
+    &::-webkit-scrollbar {
+      display:  none;
+    }
+  }
+
+  &__control-panel {
+    position: absolute;
+    top: 10rem;
+    width: 16.8rem;
+    height: 2rem;
+    z-index: 3;
+  }
+
+  &__button {
+    position: absolute;
+    top: -5.5rem;
+    border: none;
+    width: 20px;
+    height: 20px;
+    opacity: .6;
+    transition: opacity .2s ease-in-out, border-color .3s ease-in-out;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: transparent;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 1;
+      border-color: @whitesmoke;
+    }
+
+    &--left {
+      left: 0;
+      transform: rotate(45deg);
+      border-radius: 0 0 0 4px;
+      border-left: 2px solid @GarciaDeepWaterBlue;
+      border-bottom: 2px solid @GarciaDeepWaterBlue;
+    }
+
+    &--right {
+      right: 0;
+      transform: rotate(45deg);
+      border-radius: 0 0 0 4px;
+      border-right: 2px solid @GarciaDeepWaterBlue;
+      border-top: 2px solid @GarciaDeepWaterBlue;
+    }
+  }
+}
+
+/* ===========================================
+          Media Queries
+=========================================== */
+
+@media (max-width: 550px){
+  .c-carousel {
+    &__container {
+      width: 40rem;
+    }
+
+    &__control-panel {
+      left: 11.5rem;
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .c-carousel {
+    &__container {
+      width: 30rem;
+    }
+
+    &__control-panel {
+      left: 6.4rem;
+    }
+  }
+}
+
+@media (min-width: 551px) {
+  .c-carousel {
+    &__container {
+      width: 50rem;
+    }
+    &__control-panel {
+      left: calc(33.3333333%);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .c-carousel {
+    &__container {
+      width: 60rem;
+    }
+
+    &__control-panel {
+      width: 20rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-carousel {
+    &__control-panel {
+      left: calc(33.3333333% - 9rem);
+      width: 30rem;
+      top: 12rem;
+    }
+  }
+}

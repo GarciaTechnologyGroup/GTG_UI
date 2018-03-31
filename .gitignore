@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+npm-debug.log
+
+# IntelliJ
+.idea
+dist
+.DS_Store
+babel-node/

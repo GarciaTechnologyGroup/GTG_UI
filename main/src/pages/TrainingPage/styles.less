@@ -1,0 +1,254 @@
+@import '../../../style/style-variables';
+
+.c-training-page {
+  &__container {
+    background: @alternategrey;
+  }
+
+  &__skills {
+    padding: 6.5rem 0;
+    color: @white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__skill-toggle-container {
+    margin: 4rem auto;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__skill-toggle-list {
+    display: flex;
+    flex-direction: row;
+    background: @tarPit;
+  }
+
+  &__button {
+    &:focus {
+      color: @GarciaDeepWaterBlue;
+    }
+  }
+
+  &__unselected-button {
+    background: @tarPit;
+    color: @white;
+  }
+
+  &__skill-inner {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    background: #000;
+  }
+
+  &__skill-logo-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__skill-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: @whitesmoke
+  }
+
+  &__skill-title {
+    font-family: "Jura";
+  }
+}
+
+/* ===========================================
+                Media Queries
+=========================================== */
+
+/* extra small screens and phones */
+
+@media (max-width: 576px) {
+  .c-training-page {
+    &__skill-toggle-list {
+      padding: 3px;
+      border-radius: 2.4rem;
+    }
+
+    &__button {
+      padding: .4rem 1.6rem;
+      border-radius: 2rem;
+      font-size: 1.4rem;
+    }
+
+    &__skill-list {
+      padding: 0 .8rem;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+    &__skill-cell {
+      width: 100%;
+      margin-top: .8rem;
+    }
+
+    &__skill-inner {
+      padding-left: .4rem;
+      padding-right: .4rem;
+      height: 12rem;
+    }
+
+    &__skill-logo-cell {
+      margin: 1.6rem;
+    }
+
+    &__skill-logo {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    &__skill-title {
+      font-size: 1.6rem;
+    }
+
+    &__skill-blurb {
+      margin-top: .4rem;
+      margin-bottom: .4rem;
+      font-size: 1.4rem
+    }
+  }
+}
+
+/* small screens and tablets */
+
+@media(min-width: 576px) {
+  .c-training-page {
+    &__skill-toggle-list {
+      padding: 3px;
+      border-radius: 2.4rem;
+    }
+
+    &__button {
+      padding: .4rem 1.6rem;
+      border-radius: 2rem;
+      font-size: 1.4rem;
+    }
+
+    &__skill-list {
+      padding: 0 1.6rem;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+
+    &__skill-cell {
+      width: 100%;
+      margin-top: .8rem;
+    }
+
+    &__skill-inner {
+      padding: .8rem;
+      height: 9.6rem;
+    }
+
+    &__skill-logo-cell {
+      margin: 1.6rem;
+    }
+
+    &__skill-logo {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &__skill-title {
+      font-size: 1.6rem;
+    }
+
+    &__skill-blurb {
+      margin-top: .4rem;
+      margin-bottom: .4rem;
+      font-size: 1.4rem
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .c-training-page {
+    &__button {
+      padding: .8rem 4rem;
+      border-radius: 2rem;
+      font-size: 1.6rem;
+    }
+
+    &__skill-list {
+      padding: 0 4.8rem;
+    }
+
+    &__skill-cell {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .c-training-page {
+    &__skill-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+    }
+
+    &__skill-cell {
+      width: calc(100vw - (50% + 2rem));
+      padding: .8rem;
+      margin-top: .8rem;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+
+    &__skill-title {
+      font-size: 1.6rem;
+    }
+
+    &__skill-blurb {
+      margin-top: .4rem;
+      margin-bottom: .4rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .c-training-page {
+    &__skill-cell {
+      width: calc(100vw - (50% + 4rem));
+    }
+
+    &__skill-logo {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    &__skill-title {
+      font-size: 2rem;
+    }
+
+    &__skill-blurb {
+      margin-top: .8rem;
+      margin-bottom: .8rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .c-training-page {
+    &__skill-cell {
+      width: calc(100vw - (50% + 6.4rem));
+    }
+  }
+}

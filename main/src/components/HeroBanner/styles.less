@@ -1,0 +1,355 @@
+@import '../../../style/style-variables.less';
+
+.c-hero-banner {
+  &__shell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-size: cover;
+    height: 45rem;
+
+    &--landing-page {
+      background: linear-gradient(@GarciaDeepWaterBlue, transparent 90%),
+      linear-gradient(0deg, @white, transparent),
+      @GarciaDeepWaterBlue url('../../../assets/images/hero-upsidedown-dallas.jpg') no-repeat center;
+    }
+
+    &--alternate-page {
+      border-top: .8rem solid @GarciaSoftBlue;
+      border-bottom: .8rem solid @GarciaSoftBlue;
+    }
+
+    &--training-page {
+      background: linear-gradient(@whitesmoke, transparent 90%),
+      linear-gradient(0deg, @whitesmoke, transparent),
+      @GarciaSoftBlue url('../../../assets/images/code.png') no-repeat center;
+    }
+
+    &--about-page {
+      background: linear-gradient(@whitesmoke, transparent 90%),
+      linear-gradient(0deg, @whitesmoke, transparent),
+      @GarciaSoftBlue url('../../../assets/images/dallas-architecture.jpg') no-repeat center;
+    }
+  }
+
+
+  &__shell > img {
+    max-width: 100%;
+  }
+
+  &__cell {
+    padding: 0 15px;
+  }
+
+  &__jumbotron {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 3.5rem;
+    letter-spacing: .01em;
+    position: relative;
+  }
+
+  &__font-color {
+    &--landing-page {
+      color: white;
+    }
+
+    &--about-page {
+      color: @GarciaDeepWaterBlue;
+    }
+
+    &--training-page {
+      color: @tarPit;
+    }
+  }
+
+  &__big-fat-font {
+    font-family: "Raleway";
+    font-style: italic;
+  }
+
+  &__big-skinny-font {
+    font-family: "Raleway";
+  }
+
+  &__edge {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-left: 3px solid #fff;
+    border-top: 3px solid #fff;
+  }
+
+  &__jumbo-subtext-container {
+    font-family: "Raleway";
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 3rem;
+    color: @whitesmoke;
+    &--training-page {
+      font-family: "Raleway";
+      font-style: italic;
+    }
+    &--about-page {
+      font-family: "Raleway";
+      font-style: italic;
+    }
+  }
+}
+
+/* ===========================================
+                Media Queries
+=========================================== */
+
+@media (max-width: 768px) {
+  .c-hero-banner {
+    &__range {
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__jumbotron {
+      font-size: 3.2rem;
+    }
+
+    &__jumbo-subtext-container {
+      margin: 1rem auto;
+      &--landing-page{
+        font-size: 2.4rem;
+      }
+
+      &--training-page {
+        font-size: 1.6rem;
+        color: @tarPit;
+      }
+
+      &--about-page {
+        color: @GarciaDeepWaterBlue;
+        font-size: 2.4rem;
+      }
+    }
+
+    &__shell {
+      max-width: 768px;
+
+      &--about-page {
+        color: @GarciaDeepWaterBlue;
+        height: 24rem;
+      }
+
+      &--landing-page {
+        height: 34rem;
+      }
+      &--training-page {
+        height: 34rem;
+      }
+    }
+    &__range > .c-hero-banner__cell {
+      flex: 0 0 auto;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .c-hero-banner {
+    &__jumbotron {
+      font-size: 2.4rem;
+    }
+
+    &__jumbo-subtext-container {
+      &--landing-page {
+        font-size: 1.6rem;
+      }
+      &--about-page {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .c-hero-banner {
+    &__jumbotron {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .c-hero-banner {
+    &__cell {
+      padding: 0;
+    }
+
+    &__jumbotron {
+      font-size: 4rem;
+    }
+
+    &__jumbo-subtext-container {
+      margin: 1rem auto;
+      &--landing-page {
+        font-size: 2.4rem;
+      }
+
+      &--training-page {
+        color: @tarPit;
+        font-size: 2.4rem;
+      }
+
+      &--about-page {
+        color: @GarciaDeepWaterBlue;
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .c-hero-banner {
+    &__edge {
+      display: none;
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .c-hero-banner {
+    &__jumbotron {
+      font-size: 5.6rem;
+    }
+
+    &__jumbo-subtext-container {
+      &--landing-page {
+        font-size: 3.2rem;
+      }
+
+      &--training-page {
+        font-size: 2.4rem;
+      }
+
+      &--about-page {
+        color: @GarciaDeepWaterBlue;
+        font-size: 4rem;
+      }
+    }
+
+    &__edge {
+      &--top-left {
+        top: -27px;
+        left: -25px;
+      }
+      &--top-right {
+        top: -27px;
+        right: -25px;
+        transform: rotate(90deg);
+      }
+
+      &--bottom-left {
+        left: -25px;
+        bottom: -75px;
+        transform: rotate(-90deg);
+      }
+
+      &--bottom-right {
+        right: -25px;
+        bottom: -75px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .c-hero-banner {
+    &__jumbotron {
+      &--landing-page {
+        font-size: 6.4rem;
+      }
+
+      &--about-page {
+        font-size: 6.4rem;
+      }
+
+      &--training-page {
+        font-size: 6.4rem;
+      }
+    }
+
+    &__jumbo-subtext-container {
+      &--landing-page {
+        font-size: 3.2rem;
+      }
+
+      &--training-page {
+        font-size: 3.2rem;
+      }
+
+      &--about-page {
+        font-size: 4rem;
+      }
+    }
+
+    &__edge {
+      border-radius: 4px 0 0 0;
+      &--top-left {
+        top: -27px;
+        left: -25px;
+      }
+      &--top-right {
+        top: -27px;
+        right: -25px;
+        transform: rotate(90deg);
+      }
+
+      &--bottom-left {
+        left: -25px;
+        bottom: -75px;
+        transform: rotate(-90deg);
+      }
+
+      &--bottom-right {
+        right: -25px;
+        bottom: -75px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media(min-width: 1700px) {
+  .c-hero-banner {
+    &__shell {
+      max-width: 3000px;
+    }
+    &__edge {
+      &--top-left {
+        top: -27px;
+        left: -25px;
+      }
+      &--top-right {
+        top: -27px;
+        right: -25px;
+        transform: rotate(90deg);
+      }
+
+      &--bottom-left {
+        left: -25px;
+        bottom: -75px;
+        transform: rotate(-90deg);
+      }
+
+      &--bottom-right {
+        right: -25px;
+        bottom: -75px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+

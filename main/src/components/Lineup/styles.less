@@ -1,0 +1,54 @@
+@import '../../../style/style-variables.less';
+
+.c-lineup {
+  &__wrapper {
+    text-align: center;
+    background-color: @white;
+    width: 100%;
+  }
+
+  &__shell {
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+
+  &__selling-point {
+    float: left;
+    height: 40rem;
+    width: 33.33333%;
+  }
+}
+/* ===========================================
+          Media Queries
+=========================================== */
+
+@media (max-width: 992px) {
+  .c-lineup {
+    &__shell {
+      max-width: 750px;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      height: 100%
+    }
+    &__selling-point {
+      width: 100%;
+      float: none;
+      height: 100%;
+      margin-top: 1.6rem;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1200px){
+  .c-lineup__shell {
+    width: 95%;
+  }
+}

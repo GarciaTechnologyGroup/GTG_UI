@@ -1,0 +1,78 @@
+@import '../../../style/style-variables.less';
+
+.c-landing-contact {
+  &__wrapper {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+  }
+
+  &__cell {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+
+  &__content-container {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: @GarciaGrey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+
+  &__icon-info-cell {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon > i {
+    color: @GarciaGrey;
+    line-height: 1px;
+  }
+
+  &__contact-box {
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+}
+
+/* ===========================================
+          Media Queries
+=========================================== */
+
+@media (max-width: 768px) {
+  .c-landing-contact {
+    &__wrapper {
+      height: 100%;
+    }
+    &__cell {
+      margin: 1rem auto;
+    }
+    &__header {
+      font-size: 2.3rem;
+    }
+    &__icon > i {
+      font-size: 2.3rem;
+      line-height: 2px;
+    }
+    &__contact-box {
+      font-size: 1.3rem;
+    }
+  }
+}

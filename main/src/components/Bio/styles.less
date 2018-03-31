@@ -1,0 +1,141 @@
+@import '../../../style/style-variables.less';
+
+.c-bio {
+  &__wrapper {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    padding-bottom: 5.6rem;
+  }
+
+  &__single-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    white-space: normal;
+  }
+
+  &__photo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 0 2rem 2rem;
+  }
+
+
+  &__bio {
+    color: @GarciaDeepWaterBlue;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2;
+    white-space: normal;
+  }
+
+  &__hj-list {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &__icon-divider {
+    width: 40px;
+    height: 40px;
+    margin: 2rem 0;
+    background-image: url('http://garcia.technology/assets/images/garcia_G_3d-c1838b0bc6a1a72a6ecaf94b96370d0f.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__name-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name {
+    > h1 {
+      color: @GarciaDeepWaterBlue;
+      margin: .5rem 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    > p {
+      color: @GarciaDeepWaterBlue;
+    }
+  }
+}
+
+/* ===========================================
+          Media Queries
+=========================================== */
+
+@media (max-width: 550px){
+  .c-bio {
+    &__bio {
+      width: 40rem;
+      font-size: 1.2rem;
+      padding: 0 1.6rem;
+    }
+
+    &__hj-list {
+      font-size: 1.2rem;
+    }
+
+    &__title {
+      > p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .c-bio {
+    &__bio {
+      width: 30rem;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .c-bio {
+    &__title {
+      font-size: 1.4rem;
+    }
+
+    &__bio {
+      font-size: 1.4rem;
+    }
+
+    &__hj-list {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .c-bio {
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__bio {
+      font-size: 1.6rem;
+    }
+
+    &__hj-list {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-bio {
+    &__photo {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+}

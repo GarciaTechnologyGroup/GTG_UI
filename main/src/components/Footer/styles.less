@@ -1,0 +1,112 @@
+@import '../../../style/style-variables.less';
+
+.c-footer {
+  &__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: @tarPit;
+    color: @tireFire;
+  }
+
+  &__copy-privacy-cell {
+    margin: 1rem;
+  }
+
+  &__copyright {
+    font-size: 1.6rem;
+    &:before {
+      font-size: 1.2rem;
+      content: "© ";
+    }
+    &:after {
+      content: " | ";
+    }
+  }
+
+  &__privacy-link {
+    color: @tireFire;
+    font-size: 1.6rem;
+  }
+
+  &__privacy-link:visited {
+    color: @tireFire;
+  }
+
+  &__privacy-link:hover {
+    color: @GarciaSoftBlue;
+  }
+
+  &__social-cell {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30rem;
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .3s ease-in;
+    color: @white;
+    > i {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: font-size .5s, color ease-out .5s;
+    }
+
+    &--twitter:hover {
+      color: #4099FF;
+      > i {
+        font-size: 4.5rem;
+      }
+    }
+
+    &--facebook:hover {
+      > i {
+      font-size: 4.5rem;
+    }
+      color: #3b5998;
+    }
+
+    &--instagram {
+      border-radius: 14px;
+      transition: background 2s ease-out;
+    }
+    &--instagram:hover {
+      > i {
+        font-size: 4.5rem;
+      }
+      color: #bc2a8d;
+    }
+  }
+}
+/********** MEDIA QUERIES **********/
+
+@media screen and (max-width: 998px) {
+  .c-footer {
+    &__social-cell {
+      width: 20rem;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .c-footer {
+    &__container {
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__copy-privacy-cell {
+      order: 1;
+      margin-left: 0;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import '../../../../main/assets/icons/iconfont.less';
+@import '../../../style/style-variables.less';
+.c-selling-point {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__icon {
+    color: @whitesmoke;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-image: linear-gradient(@GarciaSkyBlue, @GarciaSoftBlue, @GarciaDeepWaterBlue);
+  }
+
+  &__headline {
+    color: @tireFire;
+  }
+
+  &__description {
+    width: 80%;
+    font-size: 1.6rem;
+
+    line-height: 3rem;
+    color: @tireFire;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-selling-point {
+    &__wrapper {
+      padding: 1.6rem;
+    }
+
+    &__icon {
+      height: 7rem;
+      width: 7rem;
+      & > i {
+        font-size: 3rem;
+      }
+    }
+    &__description {
+      width: 95%;
+      font-size: 1.3rem;
+    }
+  }
+}
