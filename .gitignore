@@ -6,4 +6,4 @@ npm-debug.log
 .idea
 dist
 .DS_Store
-babel-node/
+babel-node
