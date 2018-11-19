@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.less';
 
-const propTypes = {
-  className: PropTypes.string,
-  enter: PropTypes.string,
-  exit: PropTypes.string,
-  children: PropTypes.node,
-  height: PropTypes.number.isRequired,
-};
-
-const defaultProps = {
-  className: null,
-  enter: null,
-  exit: null,
-  children: null,
-};
-
 class Sticky extends React.Component {
+  static propTypes = {
+    className: PropTypes.string,
+    enter: PropTypes.string,
+    exit: PropTypes.string,
+    children: PropTypes.node,
+    height: PropTypes.number.isRequired,
+  };
+
+  static defaultProps = {
+    className: null,
+    enter: null,
+    exit: null,
+    children: null,
+  };
+
   componentDidMount() {
     const setInitialHeights = (elements) => {
       [].forEach.call(elements, (sticky) => {
@@ -64,6 +64,4 @@ class Sticky extends React.Component {
   }
 }
 
-Sticky.propTypes = propTypes;
-Sticky.defaultProps = defaultProps;
 export default Sticky;
